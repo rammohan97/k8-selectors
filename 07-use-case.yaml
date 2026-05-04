@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: redis
-        image: redis:3.2-lpine
+        image: redis:3.2-alpine
       
       affinity:
         podAntiAffinity:
