@@ -1,27 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pod-1
+  name: pod-3
   labels:
-    app: pod-1
+    app: pod-3
 spec:
   containers:
   - name: nginx
     image: nginx
 
---- # Pod Affinity Example
-apiVersion: v1
-kind: Pod
-metadata:
-  name: pod-2
-  lebels:
-    app: pod-2
-spec:
-  containers:
-  - name: nginx
-    image: nginx
   affinity:
-    podAffinity:
+    podAntiAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
       # Pod labels
       - labelSelector:
@@ -30,5 +19,5 @@ spec:
             operator: In
             values:
             - pod-1
+            - pod-2
         topologyKey: "kubernetes.io/hostname"
-  
