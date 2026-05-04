@@ -12,7 +12,7 @@ spec:
                 operator: In
                 values:
                   - us-east-1f
-          - matachExpressions:
+          - matchExpressions:
               - key: disktype
                 operator: In
                 values:
