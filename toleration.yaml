@@ -6,6 +6,8 @@ metadata:
     project: roboshop
     purpose: toleration-demo
 spec:
+  nodeSelector:
+    kubernetes.io/hostname: ip-192-168-21-195.ec2.internal
   replicas: 1
   selector:
     matchLabels:

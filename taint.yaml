@@ -6,6 +6,7 @@ metadata:
     project: roboshop
     purpose: web
 spec:
+  
   replicas: 1
   selector:
     matchLabels:
