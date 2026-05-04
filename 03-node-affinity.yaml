@@ -12,6 +12,11 @@ spec:
                 operator: In
                 values:
                   - us-east-1f
+          - matachExpressions:
+              - key: disktype
+                operator: In
+                values:
+                  - ssd
 
   containers:
   - name: nginx
